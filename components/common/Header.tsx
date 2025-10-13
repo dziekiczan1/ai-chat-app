@@ -9,9 +9,7 @@ import { ROUTES } from "@/lib/routes";
 
 export const Header = () => {
   const pathname = usePathname();
-  const { authState, logout } = useAuth();
-
-  if (!authState.isAuthenticated) return null;
+  const { logout } = useAuth();
 
   const isActive = (path: string) => pathname === path;
 
