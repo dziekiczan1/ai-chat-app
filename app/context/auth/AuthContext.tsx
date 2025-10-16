@@ -3,8 +3,8 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-import { MOCK_USER, MOCK_PASSWORD } from "./mockData";
 import { AuthContextType, AuthState } from "./types";
+import { MOCK_PASSWORD, MOCK_USER } from "@/lib/userMock";
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
