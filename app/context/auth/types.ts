@@ -13,4 +13,6 @@ export interface AuthContextType {
   authState: AuthState;
   login: (email: string, password: string) => boolean;
   logout: () => void;
+  updateUser: (userData: Partial<User>) => void;
+  isLoading: boolean;
 }

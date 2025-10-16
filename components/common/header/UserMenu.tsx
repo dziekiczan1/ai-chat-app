@@ -33,7 +33,7 @@ export const UserMenu = ({ user, onLogout }: UserMenuProps) => {
           >
             <Avatar className="w-10 h-10 rounded-full ring-2 ring-gray-200">
               <AvatarImage
-                src={user.profilePicture || "/user.svg"}
+                src={user.profilePicture}
                 alt={user.name}
                 className="object-cover"
               />

@@ -1,7 +1,7 @@
 export const MOCK_USER = {
   email: "test@example.com",
   name: "User",
-  profilePicture: "/user.svg",
+  profilePicture: "/avatars/default.webp",
 };
 
 export const MOCK_PASSWORD = "password123";
