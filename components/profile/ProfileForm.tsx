@@ -95,6 +95,13 @@ export const ProfileForm = () => {
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <AvatarSelector
+              selectedAvatar={form.watch("profilePicture")}
+              onSelectAvatar={(avatar) =>
+                form.setValue("profilePicture", avatar)
+              }
+            />
+
             <FormField
               control={form.control}
               name="name"
