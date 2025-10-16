@@ -25,7 +25,7 @@ export const Navigation = () => {
                   : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
               }`}
             >
-              <Icon className="w-4 h-4 mr-2" />
+              <Icon className="w-4 h-4" />
               <span>{label}</span>
               {isActive(path) && (
                 <motion.div

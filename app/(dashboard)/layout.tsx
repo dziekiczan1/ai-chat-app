@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import { useAuth } from "@/app/context/auth/AuthContext";
-import { Header } from "@/components/common/Header";
+import { Header } from "@/components/common/header/Header";
 import { ROUTES } from "@/lib/routes";
 
 export default function ChatLayout({
