@@ -4,8 +4,9 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import { useAuth } from "@/app/context/auth/AuthContext";
-import { LoginForm } from "@/components/auth";
+import { AuthCard, LoginForm } from "@/components/auth";
 import { ROUTES } from "@/lib/routes";
+import { AUTH_CONTENT } from "@/lib/auth";
 
 export default function LoginPage() {
   const { authState } = useAuth();
@@ -17,5 +18,12 @@ export default function LoginPage() {
     }
   }, [authState.isAuthenticated, router]);
 
-  return <LoginForm />;
+  return (
+    <AuthCard
+      title={AUTH_CONTENT.login.title}
+      subtitle={AUTH_CONTENT.login.subtitle}
+    >
+      <LoginForm />
+    </AuthCard>
+  );
 }
