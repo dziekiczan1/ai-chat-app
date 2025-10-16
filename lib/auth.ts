@@ -1,4 +1,21 @@
 export const AUTH_CONTENT = {
+  login: {
+    title: "Welcome back!",
+    subtitle: "Log in to continue",
+    submitButton: "Log in",
+    loadingButton: "Logging in...",
+  },
+  testCredentials: {
+    title: "Test login credentials",
+    email: {
+      label: "Email",
+      value: "test@example.com",
+    },
+    password: {
+      label: "Password",
+      value: "password123",
+    },
+  },
   fields: {
     email: {
       label: "Email",
@@ -14,5 +31,8 @@ export const AUTH_CONTENT = {
     emailInvalid: "Invalid email format",
     passwordRequired: "Password is required",
     invalidCredentials: "Invalid login credentials",
+  },
+  footer: {
+    createdBy: "Created by Piotr Rzadkowolski",
   },
 } as const;

@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { TestCredentials } from "./TestCredentials";
 import { ROUTES } from "@/lib/routes";
 import { AUTH_CONTENT } from "@/lib/auth";
 
@@ -142,6 +143,7 @@ export const LoginForm = () => {
           </motion.div>
         </form>
       </Form>
+      <TestCredentials />
     </>
   );
 };
