@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 AI Chat Application
 
-## Getting Started
+Modern, feature-rich AI chat application built with Next.js 15, React 19, TypeScript, and Tailwind CSS. Features real-time AI conversations, file uploads, speech-to-text, and persistent chat history.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🔐 Authentication
+- User login with mock authentication
+- Persistent session management (localStorage)
+- Protected routes with automatic redirects
+- User profile management
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 💬 Chat Interface
+- Real-time AI conversations
+- Streaming responses
+- Chat history persistence (sessionStorage)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 📎 File Management
+- **Supported Formats:**
+    - Images: JPG, PNG, GIF, WebP (max 5MB)
+    - Documents: PDF, TXT (max 10MB)
+- File preview before sending
+- File type and size validation
+- Visual file cards with metadata
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🎤 Speech-to-Text
+- Voice input using Web Speech API
+- Real-time transcription
+- Visual recording indicator
 
-## Learn More
+### 👤 Profile Management
+- Custom avatar selection
+- Edit name and email
+- Real-time UI updates across app
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js 18.x or higher
+- npm, yarn, or pnpm
 
-## Deploy on Vercel
+### Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/dziekiczan1/ai-chat-app
+   cd ai-chat-app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install dependencies**
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+3. **Set up environment variables**
+    ```bash
+    # Add your environment variables here
+    GOOGLE_GENERATIVE_AI_API_KEY=your_api_url
+    ```
+
+4. **Run the development server**
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    ```
+   
+5. **Open your browser**
+    ```bash
+    Navigate to http://localhost:3000
+    ```
+
+5. **Default Login Credentials**
+    ```bash
+    Email: test@example.com
+    Password: password123
+    ```
