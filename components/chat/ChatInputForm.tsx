@@ -10,9 +10,6 @@ import {
   MicOff,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
 import { FilePreview } from "./FilePreview";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
 import {
@@ -21,6 +18,9 @@ import {
   getMaxFileSize,
   isFileSupported,
 } from "@/lib/chat";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 interface ChatInputFormProps {
   input: string;
@@ -40,6 +40,20 @@ export const ChatInputForm = ({
   const [files, setFiles] = useState<File[]>([]);
   const [fileError, setFileError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const {
+    isListening,
+    transcript,
+    isSupported,
+    startListening,
+    stopListening,
+  } = useSpeechRecognition();
+
+  useEffect(() => {
+    if (transcript) {
+      setInput(input ? input + " " + transcript : transcript);
+    }
+  }, [transcript]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFiles = event.target.files;
@@ -84,6 +98,14 @@ export const ChatInputForm = ({
     setFileError(null);
   };
 
+  const handleMicToggle = () => {
+    if (isListening) {
+      stopListening();
+    } else {
+      startListening();
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!input.trim() && files.length === 0) return;
@@ -103,6 +125,15 @@ export const ChatInputForm = ({
               <div className="flex items-start gap-2 text-red-600">
                 <AlertCircle className="h-4 w-4 mt-0.5 shrink-0" />
                 <span className="text-xs whitespace-pre-line">{fileError}</span>
+              </div>
+            </Card>
+          )}
+
+          {isListening && (
+            <Card className="p-3 bg-red-50 border-red-200">
+              <div className="flex items-center gap-2 text-red-600">
+                <Mic className="h-4 w-4 animate-pulse" />
+                <span className="text-xs font-medium">Nagrywanie...</span>
               </div>
             </Card>
           )}
@@ -140,6 +171,23 @@ export const ChatInputForm = ({
             >
               <Paperclip className="h-4 w-4" />
             </Button>
+
+            {isSupported && (
+              <Button
+                type="button"
+                variant={isListening ? "destructive" : "outline"}
+                size="icon"
+                className="shrink-0"
+                onClick={handleMicToggle}
+                disabled={status !== "ready"}
+              >
+                {isListening ? (
+                  <MicOff className="h-4 w-4" />
+                ) : (
+                  <Mic className="h-4 w-4" />
+                )}
+              </Button>
+            )}
 
             <Input
               className="flex-1"
