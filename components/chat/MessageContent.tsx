@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { FileText } from "lucide-react";
 import type { UIMessage } from "ai";

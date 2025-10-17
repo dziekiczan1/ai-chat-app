@@ -1,6 +1,5 @@
-"use client";
-
 import { Bot } from "lucide-react";
+
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { CHAT_CONTENT } from "@/lib/chat";
 

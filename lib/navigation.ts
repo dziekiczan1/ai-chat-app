@@ -9,5 +9,5 @@ export interface NavigationLink {
 
 export const navigationLinks: NavigationLink[] = [
   { path: ROUTES.chat, label: "Chat", icon: MessageSquare },
-  { path: ROUTES.profile, label: "Profil", icon: User },
+  { path: ROUTES.profile, label: "Profile", icon: User },
 ];

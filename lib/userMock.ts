@@ -4,4 +4,4 @@ export const MOCK_USER = {
   profilePicture: "/avatars/default.webp",
 };
 
-export const MOCK_PASSWORD = "password123";
+export const MOCK_PASSWORD = "password123" as const;

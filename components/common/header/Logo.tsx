@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
+
 import { ROUTES } from "@/lib/routes";
 
 export const Logo = () => {

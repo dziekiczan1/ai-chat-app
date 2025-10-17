@@ -15,6 +15,10 @@ export const AUTH_CONTENT = {
       label: "Password",
       value: "password123",
     },
+    resetInfo: {
+      title: "Can't log in?",
+      description: "Clear localStorage and refresh the page.",
+    },
   },
   fields: {
     email: {

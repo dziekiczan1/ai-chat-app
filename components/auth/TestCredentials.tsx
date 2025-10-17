@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Info, Copy, Check } from "lucide-react";
+import { Info, Copy, Check, AlertCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { AUTH_CONTENT } from "@/lib/auth";
@@ -72,6 +72,16 @@ export const TestCredentials = () => {
             </Button>
           </div>
         ))}
+      </div>
+      <div className="mt-3 pt-3 border-t border-blue-200/50 flex items-start space-x-2">
+        <AlertCircle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
+        <p className="text-xs text-gray-700 leading-relaxed">
+          <span className="font-medium">
+            {AUTH_CONTENT.testCredentials.resetInfo.title}
+          </span>
+          <br />
+          {AUTH_CONTENT.testCredentials.resetInfo.description}
+        </p>
       </div>
     </motion.div>
   );

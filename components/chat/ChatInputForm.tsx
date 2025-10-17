@@ -122,7 +122,7 @@ export const ChatInputForm = ({
         <div className="flex flex-col gap-3">
           {fileError && (
             <Card className="p-3 border-red-200 bg-red-50">
-              <div className="flex items-start gap-2 text-red-600">
+              <div className="flex items-center gap-2 text-red-600">
                 <AlertCircle className="h-4 w-4 mt-0.5 shrink-0" />
                 <span className="text-xs whitespace-pre-line">{fileError}</span>
               </div>
@@ -158,7 +158,6 @@ export const ChatInputForm = ({
               onChange={handleFileChange}
               multiple
               ref={fileInputRef}
-              accept="image/*,.pdf,.txt"
             />
 
             <Button

@@ -1,7 +1,6 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { AVAILABLE_AVATARS, PROFILE_CONTENT } from "@/lib/profile";
 

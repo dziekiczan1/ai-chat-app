@@ -1,5 +1,3 @@
-"use client";
-
 import { Header } from "@/components/common/header/Header";
 import { ProtectedRoute } from "@/components/common/ProtectedRoute";
 
